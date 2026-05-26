@@ -4,7 +4,7 @@ import { toast } from "sonner";
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import "./SignupWorkspace.css";
+import "./Signupworkspace.css";
 
 /* ── Validation ── */
 const WorkspaceSchema = yup.object({

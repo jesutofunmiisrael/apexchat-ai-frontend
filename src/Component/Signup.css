@@ -1,0 +1,465 @@
+/* ═══════════════════════════════════════════════════
+   SIGNUP.CSS — ApexChat AI
+   ═══════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --apex-purple:       #5b4ef5;
+  --apex-purple-dark:  #4338e0;
+  --apex-purple-light: #ede9ff;
+  --apex-black:        #0f0e17;
+  --apex-light-bg:     #f7f7fb;
+  --apex-white:        #ffffff;
+  --font-display:      'Sora', 'Segoe UI', sans-serif;
+  --font-body:         'DM Sans', 'Segoe UI', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Page shell ── */
+.signup {
+  min-height: 100vh;
+  background: var(--apex-light-bg);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-body);
+}
+
+/* ═══════════════════════════════════════════════════
+   HEADER
+   ═══════════════════════════════════════════════════ */
+.signup__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+  background: var(--apex-white);
+  border-bottom: 1px solid rgba(91, 78, 245, 0.08);
+}
+
+.signup__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.signup__logo-icon {
+  width: 36px; height: 36px;
+  background: linear-gradient(135deg, var(--apex-purple), #7c6ffc);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 10px rgba(91, 78, 245, 0.3);
+  flex-shrink: 0;
+}
+
+.signup__logo-text {
+  font-family: var(--font-display);
+  font-size: 1.05rem; font-weight: 700;
+  color: var(--apex-black); letter-spacing: -0.02em;
+}
+
+.signup__step {
+  font-size: 0.88rem; font-weight: 500; color: #9ca3af;
+}
+
+/* ═══════════════════════════════════════════════════
+   MAIN SPLIT LAYOUT
+   ═══════════════════════════════════════════════════ */
+.signup__main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 40px 80px;
+  gap: 80px;
+  align-items: start;
+}
+
+/* ═══════════════════════════════════════════════════
+   LEFT — FORM
+   ═══════════════════════════════════════════════════ */
+.signup__left {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup__form-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 480px;
+  width: 100%;
+}
+
+.signup__form-head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.signup__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: var(--apex-black);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.signup__subtitle {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.55;
+}
+
+/* Form */
+.signup__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Field */
+.signup__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.signup__label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--apex-black);
+  letter-spacing: -0.01em;
+}
+
+.signup__input {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  color: var(--apex-black);
+  background: var(--apex-white);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.signup__input::placeholder { color: #c4c9d4; }
+
+.signup__input:focus {
+  border-color: var(--apex-purple);
+  box-shadow: 0 0 0 3px rgba(91, 78, 245, 0.12);
+}
+
+.signup__input--error {
+  border-color: #ef4444;
+  box-shadow: none;
+}
+.signup__input--error:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
+}
+
+/* Password wrapper */
+.signup__input-wrap {
+  position: relative;
+}
+
+.signup__input--pw {
+  padding-right: 48px;
+}
+
+.signup__pw-toggle {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  transition: color 0.18s ease;
+}
+.signup__pw-toggle:hover { color: var(--apex-purple); }
+
+/* Error message */
+.signup__error {
+  font-size: 0.8rem;
+  color: #ef4444;
+  font-weight: 500;
+}
+
+/* Submit button */
+.signup__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 15px 24px;
+  background: var(--apex-purple);
+  color: var(--apex-white);
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  letter-spacing: -0.01em;
+  box-shadow: 0 4px 18px rgba(91, 78, 245, 0.35);
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 4px;
+}
+.signup__submit:hover:not(:disabled) {
+  background: var(--apex-purple-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(91, 78, 245, 0.45);
+}
+.signup__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Spinner */
+.signup__spinner {
+  width: 20px; height: 20px;
+  border: 2.5px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+/* Divider */
+.signup__divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #9ca3af;
+  font-size: 0.84rem;
+}
+.signup__divider::before,
+.signup__divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Social buttons */
+.signup__socials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.signup__social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--apex-white);
+  border: 1.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  color: var(--apex-black);
+  cursor: pointer;
+  transition: border-color 0.18s ease, background 0.18s ease, transform 0.15s ease;
+}
+.signup__social-btn:hover {
+  border-color: rgba(91, 78, 245, 0.3);
+  background: var(--apex-purple-light);
+  color: var(--apex-purple);
+  transform: translateY(-1px);
+}
+
+/* Login link */
+.signup__login-link {
+  text-align: center;
+  font-size: 0.88rem;
+  color: #6b7280;
+}
+.signup__login-anchor {
+  color: var(--apex-purple);
+  font-weight: 600;
+  text-decoration: none;
+}
+.signup__login-anchor:hover { text-decoration: underline; }
+
+/* ═══════════════════════════════════════════════════
+   RIGHT — SOCIAL PROOF
+   ═══════════════════════════════════════════════════ */
+.signup__right {
+  position: sticky;
+  top: 40px;
+}
+
+.signup__right-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Testimonial card */
+.signup__testimonial {
+  background: var(--apex-white);
+  border: 1.5px solid rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04), 0 12px 40px rgba(91, 78, 245, 0.07);
+}
+
+.signup__stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.signup__quote {
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  font-weight: 700;
+  color: var(--apex-black);
+  line-height: 1.55;
+  letter-spacing: -0.02em;
+}
+
+.signup__author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.signup__avatar {
+  width: 44px; height: 44px;
+  background: linear-gradient(135deg, #e0dbff, #c5bbff);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.82rem; font-weight: 700;
+  color: var(--apex-purple);
+  flex-shrink: 0;
+  border: 2px solid rgba(91, 78, 245, 0.15);
+}
+
+.signup__author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.signup__author-name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--apex-black);
+  letter-spacing: -0.01em;
+}
+
+.signup__author-role {
+  font-size: 0.82rem;
+  color: #9ca3af;
+}
+
+/* Stats row */
+.signup__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.signup__stat {
+  background: var(--apex-white);
+  border: 1.5px solid rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.signup__stat:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(91, 78, 245, 0.1);
+}
+
+.signup__stat-num {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  font-weight: 800;
+  color: var(--apex-purple);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.signup__stat-label {
+  font-size: 0.84rem;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+/* ═══════════════════════════════════════════════════
+   KEYFRAMES
+   ═══════════════════════════════════════════════════ */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════ */
+
+/* 1100px */
+@media (max-width: 1100px) {
+  .signup__main { gap: 52px; padding: 48px 32px 72px; }
+}
+
+/* 900px — stack layout */
+@media (max-width: 900px) {
+  .signup__main {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 40px 24px 64px;
+  }
+  .signup__right { position: static; }
+  .signup__form-wrap { max-width: 100%; }
+  .signup__testimonial { padding: 28px 22px; }
+}
+
+/* 640px */
+@media (max-width: 640px) {
+  .signup__header { padding: 14px 20px; }
+  .signup__main   { padding: 32px 20px 56px; }
+  .signup__title  { font-size: 1.8rem; }
+  .signup__stats  { grid-template-columns: 1fr 1fr; }
+}
+
+/* 480px */
+@media (max-width: 480px) {
+  .signup__header        { padding: 12px 16px; }
+  .signup__main          { padding: 28px 16px 48px; gap: 36px; }
+  .signup__socials       { grid-template-columns: 1fr; }
+  .signup__stats         { grid-template-columns: 1fr; }
+  .signup__testimonial   { padding: 24px 18px; }
+  .signup__submit        { padding: 14px 20px; font-size: .95rem; }
+}
+
+/* 360px */
+@media (max-width: 360px) {
+  .signup__title  { font-size: 1.55rem; }
+  .signup__quote  { font-size: .95rem; }
+}

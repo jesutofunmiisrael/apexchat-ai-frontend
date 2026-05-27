@@ -1,271 +1,3 @@
-/* .dashboard {
-  display: flex;
-  min-height: 100vh;
-  background: #f5f7fb;
-  font-family: "Inter", sans-serif;
-}
-
-
-
-.sidebar {
-  width: 260px;
-  background: white;
-  border-right: 1px solid #e5e7eb;
-  padding: 24px 18px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.sidebar__top {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-
-  margin-bottom: 40px;
-}
-
-.sidebar__logo {
-  width: 50px;
-  height: 50px;
-
-  border-radius: 14px;
-
-  background: #5b4cf0;
-  color: white;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.sidebar__top h2 {
-  font-size: 18px;
-  color: #111827;
-  margin-bottom: 4px;
-}
-
-.sidebar__top p {
-  font-size: 14px;
-  color: #6b7280;
-}
-
-.sidebar__nav {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.sidebar__nav a {
-  text-decoration: none;
-
-  color: #4b5563;
-
-  padding: 14px 16px;
-
-  border-radius: 12px;
-
-  font-weight: 500;
-
-  transition: 0.2s ease;
-}
-
-.sidebar__nav a:hover {
-  background: #f3f4f6;
-  color: #111827;
-}
-
-.sidebar__nav a:first-child {
-  background: #ede9fe;
-  color: #5b4cf0;
-}
-
-
-
-.dashboard__main {
-  flex: 1;
-  padding: 30px;
-}
-
-
-
-.dashboard__topbar {
-  margin-bottom: 30px;
-}
-
-.dashboard__topbar input {
-  width: 100%;
-  max-width: 500px;
-
-  height: 52px;
-
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
-
-  padding: 0 18px;
-
-  font-size: 15px;
-
-  background: white;
-  outline: none;
-}
-
-.dashboard__topbar input:focus {
-  border-color: #5b4cf0;
-}
-
-
-.dashboard__welcome {
-  margin-bottom: 30px;
-}
-
-.dashboard__welcome h1 {
-  font-size: 40px;
-  color: #111827;
-
-  margin-bottom: 10px;
-}
-
-.dashboard__welcome p {
-  color: #6b7280;
-  font-size: 17px;
-}
-
-
-
-.dashboard__cards {
-  display: grid;
-
-  grid-template-columns:
-    repeat(auto-fit, minmax(220px, 1fr));
-
-  gap: 20px;
-}
-
-.card {
-  background: white;
-
-  border-radius: 22px;
-
-  padding: 28px;
-
-  border: 1px solid #ececec;
-
-  transition: 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-}
-
-.card h2 {
-  font-size: 38px;
-  color: #111827;
-
-  margin-bottom: 10px;
-}
-
-.card p {
-  color: #6b7280;
-  font-size: 15px;
-}
-
-
-
-@media (max-width: 900px) {
-
-  .dashboard {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-    border-right: none;
-    border-bottom: 1px solid #e5e7eb;
-  }
-
-  .dashboard__welcome h1 {
-    font-size: 30px;
-  }
-}
-
-
-.widget-install {
-  margin-top: 40px;
-
-  background: white;
-
-  padding: 28px;
-
-  border-radius: 22px;
-
-  border: 1px solid #ececec;
-}
-
-.widget-install__top h2 {
-  font-size: 24px;
-
-  margin-bottom: 10px;
-
-  color: #111827;
-}
-
-.widget-install__top p {
-  color: #6b7280;
-
-  margin-bottom: 24px;
-}
-
-.widget-install__box {
-  background: #111827;
-
-  padding: 20px;
-
-  border-radius: 16px;
-
-  overflow-x: auto;
-
-  margin-bottom: 20px;
-}
-
-.widget-install__box code {
-  color: #f9fafb;
-
-  font-size: 14px;
-
-  line-height: 1.8;
-}
-
-.widget-install__btn {
-  height: 48px;
-
-  padding: 0 20px;
-
-  border: none;
-
-  border-radius: 12px;
-
-  background: #5b4cf0;
-
-  color: white;
-
-  font-weight: 600;
-
-  cursor: pointer;
-
-  transition: 0.2s ease;
-}
-
-.widget-install__btn:hover {
-  opacity: 0.9;
-} */
-
-
-
 /* ═══════════════════════════════════════════════════
    DASHBOARD.CSS — ApexChat AI
    ═══════════════════════════════════════════════════ */
@@ -977,86 +709,98 @@
   transform: translateY(-1px);
 }
 
-
-
-
-.db__beta {
-  padding: 8px 14px;
-
-  border-radius: 999px;
-
-  background: #ede9fe;
-
-  color: #5b4ef5;
-
-  font-size: 13px;
-
-  font-weight: 700;
+/* ── Logout button ── */
+.db__logout-btn {
+  display: flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; flex-shrink: 0;
+  background: none; border: 1.5px solid rgba(0,0,0,0.1);
+  border-radius: 8px; cursor: pointer; color: #9ca3af;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.db__logout-btn:hover {
+  background: #fef2f2;
+  border-color: #fca5a5;
+  color: #ef4444;
 }
 
-.db__coming {
-  margin-left: auto;
+/* ── Stat card color variants ── */
+.db__stat-sub {
+  font-size: 0.76rem;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+.db__stat-card--purple .db__stat-icon { background: rgba(91,78,245,0.1); color: var(--apex-purple); }
+.db__stat-card--blue   .db__stat-icon { background: rgba(14,165,233,0.1); color: #0ea5e9; }
+.db__stat-card--green  .db__stat-icon { background: rgba(22,163,74,0.1);  color: #16a34a; }
+.db__stat-card--orange .db__stat-icon { background: rgba(234,88,12,0.1);  color: #ea580c; }
 
-  font-size: 11px;
+/* ── Chart empty state ── */
+.db__chart-empty {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 10px; padding: 40px 20px;
+  text-align: center;
+}
+.db__chart-empty p { font-size: 0.88rem; color: #9ca3af; max-width: 320px; line-height: 1.55; }
 
-  background: #f3f4f6;
+/* ── Convos empty state ── */
+.db__convos-empty {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 10px; padding: 36px 20px; text-align: center;
+}
+.db__convos-empty p { font-size: 0.88rem; color: #9ca3af; max-width: 280px; line-height: 1.55; }
+.db__convos-empty-link {
+  font-size: 0.84rem; font-weight: 600;
+  color: var(--apex-purple); text-decoration: none;
+  transition: color 0.15s;
+}
+.db__convos-empty-link:hover { color: var(--apex-purple-dark); text-decoration: underline; }
 
-  color: #6b7280;
+/* ── db__convo as link ── */
+.db__convo { text-decoration: none; }
 
-  padding: 4px 8px;
-
-  border-radius: 999px;
+/* ── Quick stats in right panel ── */
+.db__quick-stats {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+}
+.db__quick-stat {
+  background: var(--apex-white);
+  border: 1px solid rgba(0,0,0,0.07);
+  border-radius: 10px; padding: 12px 10px;
+  display: flex; flex-direction: column; gap: 3px;
+}
+.db__quick-stat-num {
+  font-family: var(--font-display, 'Sora', sans-serif);
+  font-size: 1.2rem; font-weight: 800;
+  color: var(--apex-purple); letter-spacing: -0.02em; line-height: 1;
+}
+.db__quick-stat-label {
+  font-size: 0.72rem; color: #9ca3af; line-height: 1.3;
 }
 
-.db__logout {
-  width: 100%;
-
-  height: 46px;
-
-  border: none;
-
-  border-radius: 12px;
-
-  background: #111827;
-
-  color: white;
-
-  font-weight: 600;
-
-  cursor: pointer;
-
-  margin-top: 18px;
-
-  transition: 0.2s ease;
+/* ── Logout button ── */
+.db__logout-btn {
+  display: flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; flex-shrink: 0;
+  background: none; border: 1.5px solid rgba(0,0,0,0.1);
+  border-radius: 8px; cursor: pointer; color: #9ca3af;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.db__logout-btn:hover {
+  background: #fef2f2; border-color: #fca5a5; color: #ef4444;
 }
 
-.db__logout:hover {
-  opacity: 0.9;
+/* ── db__visitors-btn as link ── */
+a.db__visitors-btn {
+  text-decoration: none;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  padding: 9px 10px;
+  background: var(--apex-white); border: 1.5px solid rgba(0,0,0,0.1);
+  border-radius: 10px; font-size: 0.8rem; font-weight: 600;
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  color: var(--apex-black); cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
 }
-
-
-.db__logout {
-  width: 100%;
-
-  height: 46px;
-
-  border: none;
-
-  border-radius: 14px;
-
-  background: #111827;
-
-  color: white;
-
-  font-weight: 600;
-
-  cursor: pointer;
-
-  margin-top: 20px;
-
-  transition: 0.2s ease;
-}
-
-.db__logout:hover {
-  opacity: 0.9;
+a.db__visitors-btn:hover {
+  background: var(--apex-purple-light);
+  border-color: rgba(91,78,245,0.25); color: var(--apex-purple);
 }

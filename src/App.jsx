@@ -12,6 +12,7 @@ import Dashboard from "./Component/Dashboard";
 import UnderConstruction from "./Component/UnderConstruction";
 import Widget from "./Component/Widget";
 import Login from "./Component/Login";
+import Conversations from "./Component/Conversations";
 
 
 
@@ -63,6 +64,13 @@ function App() {
   path="/dashboard/widget"
   element={<Widget />}
 />
+
+
+<Route
+  path="/conversations"
+  element={<Conversations />}
+/>
+
 
 
 <Route

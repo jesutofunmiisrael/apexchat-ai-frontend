@@ -13,6 +13,9 @@ import UnderConstruction from "./Component/UnderConstruction";
 import Widget from "./Component/Widget";
 import Login from "./Component/Login";
 import Conversations from "./Component/Conversations";
+import AIAssistant from "./Component/AIAssistant";
+import Customers from "./Component/Customers";
+
 
 
 
@@ -77,11 +80,30 @@ function App() {
   path="/login"
   element={<Login />}
 />
+
+
+<Route
+  path="/dashboard/ai"
+  element={<AIAssistant/>}
+/>
+
+
+<Route
+  path="/dashboard/ai"
+  element={<AIAssistant />}
+/>
+
+
+<Route
+  path="/dashboard/customers"
+  element={<Customers />}
+/>
       </Routes>
 
    
     </>
   );
 }
+
 
 export default App;

@@ -476,7 +476,7 @@ const Home = () => {
         <div className="footer__bottom">
           <p className="footer__copy">© 2026 ApexChat AI Inc. All rights reserved.</p>
           <div className="footer__socials">
-            <a href="#" className="footer__social-link">Twitter</a>
+            <a href="https://x.com/Jesutofunm50939" className="footer__social-link">Twitter</a>
             <a href="#" className="footer__social-link">LinkedIn</a>
           </div>
         </div>

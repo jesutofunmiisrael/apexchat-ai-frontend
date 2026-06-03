@@ -15,6 +15,7 @@ import Login from "./Component/Login";
 import Conversations from "./Component/Conversations";
 import AIAssistant from "./Component/AIAssistant";
 import Customers from "./Component/Customers";
+import Analytics from "./Component/Analytics";
 
 
 
@@ -98,9 +99,15 @@ function App() {
   path="/dashboard/customers"
   element={<Customers />}
 />
+
+
+<Route
+  path="/dashboard/analytics"
+  element={<Analytics />}
+/>
       </Routes>
 
-   
+ 
     </>
   );
 }

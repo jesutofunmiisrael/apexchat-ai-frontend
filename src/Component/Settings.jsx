@@ -74,15 +74,38 @@ const Settings = () => {
         const settingsRes = await fetch(`${BASE_URL}/api/settings/${wsData._id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
-        const settingsData = await settingsRes.json();
+       const settingsData = await settingsRes.json();
 
-  
-        const s = settingsRes.ok ? settingsData : {};
-        setSettings(s);
-        setBusinessName(s.businessName    || wsData.companyName       || "");
-        setBusinessWebsite(s.businessWebsite || wsData.companyWebsite  || "");
-        setSupportEmail(s.supportEmail    || wsData.owner?.email       || "");
-        setAiName(s.aiName               || `${wsData.companyName} AI` || "AI Assistant");
+const s =
+  settingsRes.ok && settingsData
+    ? settingsData
+    : {};
+
+setSettings(s);
+
+setBusinessName(
+  s.businessName ||
+  wsData.companyName ||
+  ""
+);
+
+setBusinessWebsite(
+  s.businessWebsite ||
+  wsData.companyWebsite ||
+  ""
+);
+
+setSupportEmail(
+  s.supportEmail ||
+  wsData.owner?.email ||
+  ""
+);
+
+setAiName(
+  s.aiName ||
+  `${wsData.companyName} AI` ||
+  "AI Assistant"
+);
         setWelcomeMessage(s.welcomeMessage|| wsData.welcomeMsg         || "Hi there! 👋 How can we help you today?");
         setAiTone(s.aiTone               || wsData.tone                || "Professional");
         setAutoHandoff(s.autoHandoff !== undefined ? s.autoHandoff : true);

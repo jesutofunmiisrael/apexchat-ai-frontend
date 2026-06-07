@@ -16,6 +16,7 @@ import Conversations from "./Component/Conversations";
 import AIAssistant from "./Component/AIAssistant";
 import Customers from "./Component/Customers";
 import Analytics from "./Component/Analytics";
+import Settings from "./Component/Settings";
 
 
 
@@ -105,12 +106,20 @@ function App() {
   path="/dashboard/analytics"
   element={<Analytics />}
 />
+
+
+
+<Route
+  path="/dashboard/settings"
+  element={<Settings />}
+/>
       </Routes>
 
  
     </>
   );
 }
+
 
 
 export default App;
